@@ -1,0 +1,5 @@
+2019-06-25 17:05:28,404 DEBUG Request: (<Step: "When cities with data">,)
+2019-06-25 17:05:28,657 DEBUG Request: (<Step: "Then Cities row with slug tehran must be">,)
+2019-06-25 17:05:28,657 INFO [{'slug': 'tehran', 'title': 'تهران', 'is_active': True}]
+2019-06-25 17:05:28,661 INFO {'city_id': 173, 'created_at': '2019-06-25T12:35:28.586413', 'is_active': True, 'slug': 'tehran', 'title': 'تهران'}
+2019-06-25 17:05:28,661 INFO {'city_id': 173, 'created_at': '2019-06-25T12:35:28.586413', 'is_active': True, 'slug': 'tehran', 'title': 'تهران'}
