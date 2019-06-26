@@ -6,7 +6,7 @@ Feature: City list query check and add city
 #  Scenario: successful add cities
 #    When Adding cities with data
 #      | slug   | title|  is_active |
-#      | tehran | تهران|  false     |
+#      | tehran | تهران|  true     |
 #      | karaj  | کرج  |  true      |
 #    Then Status code must be 201
 
@@ -42,6 +42,24 @@ Feature: City list query check and add city
 #    And List must not be empty
 
 
-#  Scenario: Delete some rows in cities
+#..................6................#
+#  Scenario: Successfully Delete row in cities
 #    When Delete city row with slug tehran
-#    Then
+#    Then Successfully disabled code must be 204
+
+
+#..................7................#
+#  Scenario: Delete wrong row in cities
+#    When Delete city row with wrong slug n
+#    Then wrong slug for disable code must be 404
+
+
+#..................8 ..................#
+#  Scenario: Successfully modified the city
+#    When modify city row with slug tehran
+#      | slug   | title| is_active |
+#      | tehran | مهسا |  true     |
+#    Then Modified code must be 204
+#    And Modified cities row with slug tehran must be
+#      | slug   | title| is_active |
+#      | tehran | مهسا|  true     |

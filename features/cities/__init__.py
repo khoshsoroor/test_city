@@ -41,13 +41,13 @@ def add_cities(self):
 def check_city_added(self, slug: str):
     rows = tools.guess_types(self.hashes)
     logger.info(rows)
-    res = requests.get(f"{config.base_api_uri}/cities/{slug}", headers={"Accept-Language":"en-US"})
+    res = requests.get(f"{config.base_api_uri}/cities/{slug}", headers={"Accept-Language": "en-US"})
     logger.info(res.json())
     result2 = res.json()
     logger.info(result2)
     assert all((rows[0][key] == result2[key] for key in rows[0]))
 
-####4th Scenario##############
+############4th Scenario##############
 # @step(r'the city rows must be unique in (\S+) field')
 # def check_unique_slug(self, slug):
 #     res= list()
@@ -64,7 +64,7 @@ def get_city_list(_):
 
 
 @step(r"Result code must be (\d+)")
-def check_result(_, status_code):
+def check_result_list(_, status_code):
     logger.info(world.status)
     assert world.status == int(status_code)
 
@@ -73,7 +73,45 @@ def check_result(_, status_code):
 def check_cities_list(_):
     assert len(world.result) > 0
 
+####6th Scenario##############
+@step(r'Delete city row with slug (\S+)')
+def successfully_deleted_city(self, slug : str):
+    res = requests.delete(f"{config.base_api_uri}/cities/{slug}")
+    world.deleted = res.status_code
 
+@step(r'Successfully disabled code must be (\d+)')
+def check_success_code_deleted(_, status_code):
+    logger.info(world.deleted)
+    assert world.deleted == int(status_code)
 
+#########7th Scenario##############
+@step(r'Delete city row with wrong slug (\S+)')
+def delete_wrong_city(self, slug : str):
+    res = requests.delete(f"{config.base_api_uri}/cities/{slug}")
+    world.wrong = res.status_code
 
+@step(r'wrong slug for disable code must be (\d+)')
+def check_success_code_deleted(_, status_code):
+    logger.info(world.wrong)
+    assert world.wrong == int(status_code)
 
+#########8th Scenario##############
+@step(r'modify city row with slug (\S+)')
+def successfully_Modify_city(self, slug: str):
+    res = requests.put(f"{config.base_api_uri}/cities/{slug}", json=tools.guess_types(self.hashes)[0])
+    world.modify = res.status_code
+
+@step(r'Modified code must be (\d+)')
+def check_code_modified(_, status_code):
+    logger.info(world.modify)
+    assert world.modify == int(status_code)
+
+@step(r'Modified cities row with slug (\S+) must be')
+def checklist_city_modified(self, slug: str):
+    rows = tools.guess_types(self.hashes)
+    logger.info(rows)
+    res = requests.get(f"{config.base_api_uri}/cities/{slug}", headers={"Accept-Language":"en-US"})
+    logger.info(res.json())
+    result2 = res.json()
+    logger.info(result2)
+    assert all((rows[0][key] == result2[key] for key in rows[0]))

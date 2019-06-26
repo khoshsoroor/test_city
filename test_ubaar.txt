@@ -1,0 +1,4 @@
+2019-06-23 15:28:06,841 DEBUG Request: (<Step: "When Getting the list of cities">,)
+2019-06-23 15:28:06,849 INFO {"odata.count":2,"value":[{"city_id":1,"created_at":"1398-04-02T14:53:15.235728+04:30","is_active":true,"slug":"tehran","title":"تهران"},{"city_id":2,"created_at":"1398-04-02T14:53:16.933307+04:30","is_active":true,"slug":"tehran","title":"تهران"}]}
+2019-06-23 15:28:06,849 DEBUG Request: (<Step: "Then Result code must be 200">,)
+2019-06-23 15:28:06,849 DEBUG Request: (<Step: "And List must not be empty">,)

@@ -1,5 +1,7 @@
-2019-06-25 17:05:28,404 DEBUG Request: (<Step: "When cities with data">,)
-2019-06-25 17:05:28,657 DEBUG Request: (<Step: "Then Cities row with slug tehran must be">,)
-2019-06-25 17:05:28,657 INFO [{'slug': 'tehran', 'title': 'تهران', 'is_active': True}]
-2019-06-25 17:05:28,661 INFO {'city_id': 173, 'created_at': '2019-06-25T12:35:28.586413', 'is_active': True, 'slug': 'tehran', 'title': 'تهران'}
-2019-06-25 17:05:28,661 INFO {'city_id': 173, 'created_at': '2019-06-25T12:35:28.586413', 'is_active': True, 'slug': 'tehran', 'title': 'تهران'}
+2019-06-26 16:59:57,675 DEBUG Request: (<Step: "When modify city row with slug tehran">,)
+2019-06-26 16:59:57,839 DEBUG Request: (<Step: "Then Modified code must be 204">,)
+2019-06-26 16:59:57,839 INFO 204
+2019-06-26 16:59:57,839 DEBUG Request: (<Step: "And Modified cities row with slug tehran must be">,)
+2019-06-26 16:59:57,839 INFO [{'slug': 'tehran', 'title': 'مهسا', 'is_active': True}]
+2019-06-26 16:59:57,847 INFO {'city_id': 186, 'created_at': '2019-06-26T12:07:12.676336', 'is_active': True, 'slug': 'tehran', 'title': 'مهسا', 'updated_at': '2019-06-26T12:29:57.775225'}
+2019-06-26 16:59:57,847 INFO {'city_id': 186, 'created_at': '2019-06-26T12:07:12.676336', 'is_active': True, 'slug': 'tehran', 'title': 'مهسا', 'updated_at': '2019-06-26T12:29:57.775225'}
