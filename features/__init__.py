@@ -31,8 +31,3 @@ logger.setLevel(logging.DEBUG)
 def log(*args):
     logger.debug('Request: ' + str(args))
 
-#
-# @after.each_step
-# def response(*args):
-#     if hasattr(world, 'res'):
-#         logger.debug('Response: ' + str(world.res))

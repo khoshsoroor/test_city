@@ -2,6 +2,6 @@
 #api_uri: http://178.22.122.235/api
 base_api_uri: http://localhost:5000
 #graphql_api_uri: http://localhost:8088/graphql
-mongo_database_uri: mongodb://localhost:27017/
-mongo_database_name: ostadkar
+#mongo_database_uri: mongodb://localhost:27017/
+#mongo_database_name: ostadkar
 

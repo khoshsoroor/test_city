@@ -1,7 +1,28 @@
-2019-06-26 16:59:57,675 DEBUG Request: (<Step: "When modify city row with slug tehran">,)
-2019-06-26 16:59:57,839 DEBUG Request: (<Step: "Then Modified code must be 204">,)
-2019-06-26 16:59:57,839 INFO 204
-2019-06-26 16:59:57,839 DEBUG Request: (<Step: "And Modified cities row with slug tehran must be">,)
-2019-06-26 16:59:57,839 INFO [{'slug': 'tehran', 'title': 'مهسا', 'is_active': True}]
-2019-06-26 16:59:57,847 INFO {'city_id': 186, 'created_at': '2019-06-26T12:07:12.676336', 'is_active': True, 'slug': 'tehran', 'title': 'مهسا', 'updated_at': '2019-06-26T12:29:57.775225'}
-2019-06-26 16:59:57,847 INFO {'city_id': 186, 'created_at': '2019-06-26T12:07:12.676336', 'is_active': True, 'slug': 'tehran', 'title': 'مهسا', 'updated_at': '2019-06-26T12:29:57.775225'}
+2019-07-03 14:25:39,822 DEBUG Request: (<Step: "When Adding cities with data">,)
+2019-07-03 14:25:40,229 INFO [201, 201]
+2019-07-03 14:25:40,229 DEBUG Request: (<Step: "Then Status code must be 201">,)
+2019-07-03 14:25:40,229 DEBUG Request: (<Step: "And Cities row with slug tehran must be">,)
+2019-07-03 14:25:40,234 INFO get city response {"created_at":"2019-07-03T09:55:40.012194","is_enabled":true,"slug":"tehran","title":"تهران"}
+2019-07-03 14:25:40,234 DEBUG Request: (<Step: "When modify city row with slug tehran">,)
+2019-07-03 14:25:40,372 DEBUG Request: (<Step: "Then Modified code must be 204">,)
+2019-07-03 14:25:40,373 INFO 204
+2019-07-03 14:25:40,373 DEBUG Request: (<Step: "And Modified cities row with slug tehran must be">,)
+2019-07-03 14:25:40,390 INFO get city response {"created_at":"2019-07-03T09:55:40.012194","is_enabled":true,"slug":"tehran","title":"مهسا","updated_at":"2019-07-03T09:55:40.292433"}
+2019-07-03 14:25:40,390 DEBUG Request: (<Step: "When Add cities with data">,)
+2019-07-03 14:25:40,398 DEBUG Request: (<Step: "Then Failure code must be 400">,)
+2019-07-03 14:25:40,398 DEBUG Request: (<Step: "When Getting the list of cities">,)
+2019-07-03 14:25:40,407 INFO {"odata.count":2,"value":[{"created_at":"1398-04-12T14:25:40.153841+04:30","is_enabled":true,"slug":"karaj","title":"کرج"},{"created_at":"1398-04-12T14:25:40.012194+04:30","is_enabled":true,"slug":"tehran","title":"مهسا","updated_at":"1398-04-12T14:25:40.292433+04:30"}]}
+2019-07-03 14:25:40,407 INFO city list json
+2019-07-03 14:25:40,407 DEBUG Request: (<Step: "Then Result code must be 200">,)
+2019-07-03 14:25:40,407 INFO 200
+2019-07-03 14:25:40,407 DEBUG Request: (<Step: "And List must not be empty">,)
+2019-07-03 14:25:40,408 DEBUG Request: (<Step: "When Delete city row with slug tehran">,)
+2019-07-03 14:25:40,414 INFO 204
+2019-07-03 14:25:40,414 DEBUG Request: (<Step: "Then Successfully disabled code must be 204">,)
+2019-07-03 14:25:40,414 INFO 204
+2019-07-03 14:25:40,414 DEBUG Request: (<Step: "When Add cities with same slug">,)
+2019-07-03 14:25:40,736 INFO [201, 500]
+2019-07-03 14:25:40,736 DEBUG Request: (<Step: "Then code should be 400">,)
+2019-07-03 14:25:40,737 DEBUG Request: (<Step: "When Delete city row with wrong slug n">,)
+2019-07-03 14:25:40,743 DEBUG Request: (<Step: "Then wrong slug for disable code must be 404">,)
+2019-07-03 14:25:40,743 INFO 404
